@@ -102,7 +102,7 @@ filled_data.data <- data
 filled_data.data$steps <- mapply(filling.value, filled_data.data$steps, filled_data.data$interval)
 
 total.steps <- tapply(filled_data.data$steps, filled_data.data$date, FUN=sum)
-qplot(total.steps, binwidth=1000, xlab="Total # of Steps Per Day", ylab="Count")
+hist(total.steps, xlab="Total # of Steps Per Day", ylab="Frequency", main="Total Steps")
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-4-1.png)
